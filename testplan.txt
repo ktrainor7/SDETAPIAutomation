@@ -1,0 +1,28 @@
+Objective:
+The purpose of the following test plan is to assess https://jsonplaceholder.typicode.com/ capability to handle many users, albums, posts, comments, todos, and photos.
+
+Scope:
+The apis to test are the following:
+- https://jsonplaceholder.typicode.com/users/
+- https://jsonplaceholder.typicode.com/albums/
+- https://jsonplaceholder.typicode.com/posts/
+- https://jsonplaceholder.typicode.com/comments/
+- https://jsonplaceholder.typicode.com/todos/
+- https://jsonplaceholder.typicode.com/photos/
+
+The types of requests to test are the following:
+- GET an object many times at once
+- POST many objects to the system at once
+- PUT many changes to the system at once
+- DELETE many or all items in the system at once
+
+Test Scenarios
+"There are many users on the system at once and the system has to handle many requests at once"
+"A user updates an object at the same time another user deletes that object"
+"A user updates or posts a user object with very large numbers"
+"A user updates or posts a user object with negative numbers"
+"A user updates or posts a user object with null values (null id)"
+"A user updates or posts to the system url with javascript or sql in order to get data"
+
+Reporting
+These tests should be added to the CI/CD pipeline if possible. For load and scalability tests these results should be documented and kept with relevent project information. Pprof can be used to make sure there are no code vulnerabilities or unecessary code loops. Grafana or other monitoring software can be used to monitor the API performance.

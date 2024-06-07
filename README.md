@@ -16,3 +16,10 @@ This is a simple JavaScript application that automates the testing of an API.
 2. Navigate to the project directory: `cd SDETAPIAutomation`
 3. Install dependencies: `npm install`
 
+## Running Tests
+To run these tests write 'npm test' in the terminal in the SDETAPIAutomation directory.
+
+## Dependencies
+- axios
+- jest
+
